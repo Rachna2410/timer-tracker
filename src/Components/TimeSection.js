@@ -31,11 +31,14 @@ const TimeSection = () => {
     setIsRunning(false);
   };
 
-  const handleStop = () => {
+  const handleSave = () => {
     if (isRunning) {
       setIsRunning(false);
       setShowModal(true);
     }
+  };
+  const handleStop = () => {
+    setTime(0);
   };
 
   const handleModalClose = () => {
@@ -67,6 +70,7 @@ const TimeSection = () => {
     <div>
       <h2>Time section </h2>
       <div
+        className="test"
         style={{
           fontSize: "2rem",
           fontWeight: "bold",
@@ -94,8 +98,11 @@ const TimeSection = () => {
         >
           Pause
         </Button>
-        <Button variant="success" onClick={handleStop} className="me-2">
+        <Button variant="success" onClick={handleSave} className="me-2">
           Save
+        </Button>
+        <Button variant="danger" onClick={handleStop} className="me-2">
+          Reset
         </Button>
       </div>
 
@@ -124,7 +131,7 @@ const TimeSection = () => {
           </div>{" "}
           <br />
           <lable>Running Time :</lable>
-          <div className="time-section">{formatTime(time)} has been saved.</div>
+          <div className="time-section">{formatTime(time)}</div>
         </Modal.Body>
 
         <Modal.Footer>
