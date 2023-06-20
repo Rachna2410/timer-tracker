@@ -1,0 +1,19 @@
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.time-section {
+  margin: "1rem 0";
+  font-weight: "bold";
+  font-size: "1.2rem";
+}
+.header {
+  background-color: aquamarine;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 20px;
+}
